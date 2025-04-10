@@ -1,7 +1,6 @@
-/*Create a performance evaluation report that ranks employees by
-performance score, including their department, job title, and years at the
-company.*/
+/*Find the top 3 highest paid employees in the HR department*/
 
-select performancescore , department, jobtitle, yearsatcompany 
-from epes.`employee_performance_evaluation` 
-order by PerformanceScore desc ;
+select name, department, monthlysalary from epes.`employee_performance_evaluation`
+where Department='hr'
+order by MonthlySalary desc
+limit 3;
