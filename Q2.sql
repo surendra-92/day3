@@ -1,10 +1,9 @@
-/*Determine the impact of department and job title on performance scores 
-by analysing the average performance score for each combination? */
+/*Determine the average number of years at the company for each job title*/
 
-select 
-department,
-jobtitle, 
-avg(performancescore) as average_PerformanceScore
+select jobtitle, avg(yearsatcompany) as average_yearsAtCompany 
 from epes.`employee_performance_evaluation`
-group by department, JobTitle
-order by department, jobtitle;
+group by jobtitle; 
+
+/*select * from epes.`employee_performance_evaluation`; */
+
+
