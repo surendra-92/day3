@@ -1,7 +1,5 @@
-/*Create a performance evaluation report that ranks employees by
-performance score, including their department, job title, and years at the
-company.*/
+/* Count the number of employees in each Department ? */
 
-select performancescore , department, jobtitle, yearsatcompany 
-from epes.`employee_performance_evaluation` 
-order by PerformanceScore desc ;
+select department, count(*) as count_employees 
+from epes.`employee_performance_evaluation`
+group by department;
